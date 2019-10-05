@@ -12,6 +12,7 @@
   除此之外 N.TOPIC 會包含 test 資料夾, 而 test 中會依照 測資編號 (C) 放置
   輸入為 test.in.C
   輸出為 test.out.C
+備註: 若是題號為 sN.TOPIC 則是簡易題目, 隨便出題而已.
 ```
 
 ## 感想:
