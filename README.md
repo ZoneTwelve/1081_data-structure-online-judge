@@ -1,6 +1,4 @@
 # Data Structure 線上測驗
-## 目錄:
-[TOC]
 ## 說明:
 ```
 這是某個 Online Judge 提供的題目
