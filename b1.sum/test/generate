@@ -1,0 +1,28 @@
+const fs = require("fs");
+const { exec } = require('child_process');
+
+function program(i){
+  exec(`./program.out < ${i}.in > ${i}.out`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`exec error: ${error}`);
+      return;
+    }
+    console.log(i, "done");
+    //console.log(`stdout: ${stdout}`);
+    //console.log(`stderr: ${stderr}`);
+  });
+}
+
+function generate(){
+  var a = ~~(Math.random()*9999)-~~(Math.random()*5000), b = ~~(Math.random()*9999)-~~(Math.random()*5000);
+  return {
+    in:`${a} ${b}`,
+    out:`${a+b}`
+  };
+}
+
+for(var n=1;n<=100;n++){
+  var data = generate();
+  fs.writeFileSync(`${n}.in`, data.in);
+  program(n);
+}
