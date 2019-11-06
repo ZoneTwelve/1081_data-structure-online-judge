@@ -13,13 +13,13 @@ function generate(n){
 function func(rec = 1){
   let bracket = Math.random()>0.5;
   if(rec==1){
-    return func(rec-0.1)+symbol[~~(Math.random()*symbol).length]+func(rec-0.1);
+    return func(rec-0.1)+symbol[~~(Math.random()*symbol.length)]+func(rec-0.1);
   }else{
     if(Math.random()<rec){
       if(bracket){
-        return "("+func(rec/2)+symbol[~~(Math.random()*symbol).length]+func(rec/2)+")";
+        return "("+func(rec/2)+symbol[~~(Math.random()*symbol.length)]+func(rec/2)+")";
       }else{
-        return func(rec/3*2)+symbol[~~(Math.random()*symbol).length]+func(rec/3*2);
+        return func(rec/3*2)+symbol[~~(Math.random()*symbol.length)]+func(rec/3*2);
       }
     }else{
       return num[~~(Math.random()*num.length)];
